@@ -21,8 +21,14 @@ const initState = () => ({
   pageNum: 1,
   pageSize: 10,
   searchFormData: {},
-  listFilterVisible: false,
-  listFilterModalKey: Math.random(),
+  bt1Visible: false,
+  bt1ModalKey: Math.random(),
+  bt2Visible: false,
+  bt2ModalKey: Math.random(),
+  czp1Visible: false,
+  czp1ModalKey: Math.random(),
+  czp2Visible: false,
+  czp2ModalKey: Math.random(),
 });
 
 export default {

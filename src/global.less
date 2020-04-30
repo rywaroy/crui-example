@@ -1,0 +1,595 @@
+/* --------------------重置 ----------------------- */
+
+body {
+  font-family: 'microsoft yahei', arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 2dppx) {
+  /* Retina 下仍使用默认字体渲染 */
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+html,
+body,
+address,
+blockquote,
+div,
+dl,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+table,
+ul,
+dd,
+dt,
+li,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+button,
+del,
+ins,
+map,
+object,
+a,
+abbr,
+acronym,
+b,
+big,
+br,
+cite,
+code,
+dfn,
+em,
+i,
+img,
+kbd,
+q,
+samp,
+small,
+span,
+strong,
+sub,
+sup,
+tt,
+var,
+legend,
+fieldset {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+img,
+fieldset,
+abbr,
+acronym {
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  width: auto\9;
+  /* ie8 */
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+time,
+div,
+ul,
+li,
+dl,
+dt,
+dd {
+  font-weight: normal;
+  font-family: '\5FAE\8F6F\96C5\9ED1';
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+img {
+  -webkit-touch-callout: none;
+  -moz-touch-callout: none;
+  touch-callout: none;
+}
+
+i {
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: #ddd;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.bor-r-gray {
+  border: 1px solid #e4e7ef;
+  border-radius: 4px;
+}
+
+//详情的排版
+.row {
+  display: flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+
+  p,
+  .p {
+    padding: 5px 20px;
+    width: 33.3%;
+    font-size: 12px;
+    line-height: 26px;
+    display: flex;
+
+    label,
+    span.label {
+      display: inline-block;
+      width: 100px;
+      margin-right: 10px;
+      color: #6e7382;
+      flex: none;
+    }
+
+    span {
+      flex: 1;
+      color: #1e283c;
+      word-break: break-all;
+    }
+  }
+}
+
+/*详情图片证件*/
+.certificate-img-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  padding: 20px 0 30px 0;
+
+  div {
+    width: 33%;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .img {
+      height: 150px;
+    }
+
+    .text {
+      display: block;
+      color: #333333;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .reason {
+      display: block;
+      color: #333333;
+      text-align: center;
+      font-size: 12px;
+      color: red;
+      height: 16px;
+    }
+  }
+}
+
+//antd表格样式
+.globalContent {
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 14px;
+    border-bottom: 1px solid #e4e7ef;
+  }
+
+  .ant-table-thead > tr > th {
+    background: #f9fafb;
+    font-size: 12px;
+    line-height: normal;
+    .ant-table-header-column {
+      .ant-table-column-title {
+        color: #6e7382;
+        font-weight: bold;
+      }
+    }
+  }
+  .ant-table-tbody > tr > td {
+    color: #4b5564;
+    border-bottom: 1px solid #e4e7ef;
+    & > span,
+    & > i {
+      color: #4b5564;
+      line-height: 12px;
+    }
+  }
+}
+
+//404样式
+.NoFoundWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+//LBS  && 物流大通道 加油站图标显示
+.gasstop_icon {
+  width: 44px;
+  height: 44px;
+}
+
+//消息未读小红圈
+.unreadIcon {
+  display: inline-block;
+  background: #fe3824;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+/*加油站聚合点的点击弹窗（多处使用）*/
+.stationInfo {
+  padding: 5px 15px;
+  color: #1e283c;
+  min-width: 250px;
+
+  div {
+    padding: 5px 0;
+  }
+}
+
+/*统计信息*/
+.statistics {
+  padding: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e4e7ef;
+  color: #6e7382;
+
+  > div {
+    min-width: 80px;
+  }
+
+  .number {
+    color: #51a1fd;
+    padding: 0 16px 0 10px;
+  }
+}
+
+/*头部统计*/
+.header-statistic {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  font-size: 14px;
+  padding: 0px 30px;
+  border-bottom: 1px solid #e4e7ef;
+  min-width: 1200px;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    & + div {
+      margin-left: 100px;
+    }
+  }
+
+  .header-statistic-content {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+  }
+}
+
+.header-data {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 30px;
+  min-width: 1200px;
+  color: #333;
+
+  .header-data-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header-data-block {
+    width: 20%;
+    padding: 10px 0;
+  }
+
+  .header-data-num {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+// 头部金额统计
+.header-money {
+  width: 100%;
+  height: 84px;
+  display: flex;
+  padding: 20px 0;
+
+  .header-money-item {
+    flex: 1;
+    border-right: 1px solid #e5e8ef;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .header-money-title {
+    font-size: 12px;
+    line-height: 1;
+    color: #4b5564;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .header-money-number {
+    font-size: 24px;
+    color: #1e283c;
+    text-align: center;
+    line-height: 24px;
+    font-weight: bold;
+
+    .number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+/* 地图 - 加油站信息*/
+.gasStation-item-wrap {
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 5px;
+
+  .gasStation-item-label {
+    width: 40px;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .gasStation-item-detail {
+    flex: 1;
+    font-size: 12px;
+    color: #6e7382;
+
+    .gasStation-row {
+      margin: 6px 0;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .gasStation-name {
+      font-weight: bold;
+      font-size: 14px;
+      color: #1e283c;
+      margin: 0 0 9px 0;
+    }
+
+    .gasStation-price {
+      font-weight: bold;
+      font-size: 16px;
+      color: #1e74ff;
+    }
+
+    .setFavorite {
+      display: flex;
+      align-items: center;
+      width: 50%;
+
+      .iconfont {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+/* 地图 - 加油站图标*/
+.gasStation_icon {
+  width: 32px;
+  height: 32px;
+}
+
+// span link按钮
+.opt-link {
+  color: #1890ff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.bg-w {
+  background: #fff;
+}
+
+.hide {
+  display: none !important;
+}
+
+.tc {
+  text-align: center;
+}
+
+//单行文本溢出
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis; //文本溢出显示省略号
+  white-space: nowrap; //文本不会换行（单行文本溢出）
+}
+
+//多行文本溢出
+.ellipsis-multi-row {
+  display: -webkit-box;
+  /*autoprefixer:off*/
+  -webkit-box-orient: vertical;
+  /*autoprefixer:on*/
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.flex {
+  display: flex;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.bt {
+  border-top: 1px solid #e4e7ef;
+}
+
+.bb {
+  border-bottom: 1px solid #e4e7ef;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: ' ';
+  visibility: hidden;
+  height: 0;
+}
