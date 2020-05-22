@@ -32,6 +32,6 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "crui": "^1.4.1"
+    "crui": "^1.4.2"
   }
 }
