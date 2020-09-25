@@ -112,11 +112,22 @@ class GenerateForm extends React.Component {
 
   render() {
     /* formSet代表form表单的配置*/
-    const { className, formSet, form, gutter = 0 } = this.props;
+    const {
+      className,
+      formSet,
+      form,
+      gutter = 0,
+      labelCol = { span: 8 },
+      wrapperCol = { span: 16 },
+    } = this.props;
     const { getFieldDecorator } = form;
 
     return (
-      <Form className={`${styles.generateFormWrap} ${className}`}>
+      <Form
+        className={`${styles.generateFormWrap} ${className}`}
+        labelCol={labelCol}
+        wrapperCol={wrapperCol}
+      >
         <Row gutter={gutter} className={styles.generateFormRow}>
           {formSet.map((item, key) => {
             const {
@@ -170,7 +181,7 @@ class GenerateForm extends React.Component {
                 SubComponentMap,
                 style,
               } = mapTypeToComponent[type.toLowerCase()];
-              let subOptionsData = item[optionsData];
+              let subOptionsData = item[optionsData] || dataOptions;
               let models = item.models;
               let [valueKey = 'value', labelKey = 'label'] = models || [];
 
